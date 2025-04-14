@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Calculator</title>
+</head>
+<body>
+  <script>
+    function calculator(){
+  const number1 = parseFloat(prompt("Enter the first number"))
+  const operator = prompt("Choose the operation you want to perform.\n (eg. +, -, /, *)")
+  const number2 = parseFloat(prompt("Enter the second number"))
+
+  let result;
+  if (isNaN(number1) || isNaN(number2)) {
+    alert("Provided input is invalid")
+    return;
+  }
+
+  switch(operator){
+    case "+":
+      result= number1 + number2
+      break;
+    case "-":
+      result= number1 - number2 
+      break;
+    case "*":
+      result= number1 * number2
+      break;
+    case "/":
+      if (number2 === 0){
+        alert("Cannot divide by zero")
+        return;
+      }
+      result= number1 / number2 
+      break; 
+    default:
+      alert("Choose valid operator and try again")
+      return;     
+  }
+
+  alert(`Answer is:\n ${number1} ${operator} ${number2} = ${result}`)
+}
+
+calculator()
+  </script>
+</body> 
+</html>  
