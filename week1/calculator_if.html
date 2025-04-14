@@ -1,0 +1,42 @@
+<head>
+<html>
+ <title>Calculator</title>
+</head>
+<body>
+ <script>
+  function runCalculator () {
+  const number1=parseFloat(prompt("Enter the first number"))
+  const operator =prompt("Enter the operation you want to perform (eg. +, -, /, *)")
+  const number2=parseFloat(prompt("Enter the second number"))
+
+  let result;
+
+  if (isNaN(number1) || isNaN(number2)) {
+    alert("Input is invalid.\nPlease try again with valid input.")
+    return;
+  }
+
+  if (operator === "+"){
+    result = number1 + number2
+  }else if (operator === "-"){
+    result = number1 - number2
+  }else if (operator === "*"){
+    result = number1 * number2
+  }else if (operator === "/"){
+    if (number2 === 0){
+      alert("Cannot divide by zero.\nPlease use other value.")
+      return;
+    }
+    result = number1 / number2
+  }else{
+    alert("Please use valid operator")
+    return;
+    }
+
+  alert(`your result is-->\n${number1} ${operator} ${number2} = ${result}`)
+  }
+
+  runCalculator()
+
+ </script>
+</body>
