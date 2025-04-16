@@ -1,4 +1,4 @@
-<!DOCTYPE=html>
+
 <html>
   <head>
     <title>Fetched API Responses</title>
@@ -35,7 +35,7 @@
         <div class = "entry-title" data-testid= "title-${index}">${entry.title}</div>
         <div class = "entry-body" data-testid= "body-${index}">${entry.body}</div>
         `;
-        container.appendchild(entryDiv)
+        container.appendChild(entryDiv)
       })
     }catch (error) {
        document.getElementById('entries-container').innerText = 'Error loading posts.';
