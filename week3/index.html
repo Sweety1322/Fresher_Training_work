@@ -1,3 +1,4 @@
+<!DOCTYPE=html>
 <html>
   <head>
     <title>Fetched API Responses</title>
@@ -26,10 +27,10 @@
       const enteries = await response.json()
       const container = document.getElementById('entries-container');
         container.innerHTML = '';
-      enteries.slice(0, 5).forEach((entry,index) =>{
+      enteries.slice(0, 10).forEach((entry,index) =>{
         const entryDiv = document.createElement('div')
         entryDiv.className= 'entry'
-        entryDiv.setAttribute(`entry-${index}`)
+        entryDiv.setAttribute('data-testid', `entry-${index}`)
         entryDiv.innerHTML=`
         <div class = "entry-title" data-testid= "title-${index}">${entry.title}</div>
         <div class = "entry-body" data-testid= "body-${index}">${entry.body}</div>
