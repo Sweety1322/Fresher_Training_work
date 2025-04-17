@@ -1,0 +1,48 @@
+This file contains all the topics I have completed from the Week 2 coloumn.
+
+# ARRAYS :-
+1. What is an Array
+2. Acessing values from the Array, Finding the lenght of the Array and Changing the value of the Array.
+3. Different types of Array methods :
+ > toString()
+ > join()
+ > pop() and push()
+ > shift() and unshift()
+ > Delete and Concat
+ > Sort() and filter()
+ > Slice() and Splice()
+ > Map() and Reduce()
+4. Iterating over Array
+ > For loop
+ > For of loop
+ > For each loop
+
+# OBJECTS :-
+1. What is an Object
+2. Iterating over Object
+ > For in loop
+ > For each loop
+ > For of loop
+
+# ES6+
+1. Let and Const
+2. Arrow function
+3. Template Literals
+4. Default parameters
+5. Deconstructing
+6. Spread and Rest operators
+7. Object property shorthand
+8. Promises
+9. Classes
+10. Modules
+11. Optional chaining
+
+# DOM Manipulation
+1. What is DOM Manipulation
+2. Selecting elements
+3. Changing content
+4. Changing style
+5. Adding/Removing classes
+6. Creating/Adding elements
+7. Removing elemrnts
+8. Event handling
