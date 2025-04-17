@@ -1,0 +1,32 @@
+This file contains all the topics covered by me from the week 4 column.
+
+# NODE JS
+1. What is Node Js
+2. Key features of node.js
+3. Core modules in node.js
+ (fs, http, path, os etc)
+
+
+# NODE PACKAGE MANAGER
+1. What is npm
+2. Things npm can do like install packages, manages versions and many more.
+3. Different concepts like -->
+ > Initialize a project with npm
+ > Installing packages
+ > Package.json
+ > Common npm commands
+ > Saving dev dependencies
+
+
+# TERMINAL
+1. What is terminal and its uses
+2. Basic terminal commands
+3. Creating and managing Files
+
+# TESTING CONCEPTS
+1. What is testing 
+2. Different types of testing
+3. Levels of testing 
+4. Testing techniques 
+5. Node.js in testing context
+ 
