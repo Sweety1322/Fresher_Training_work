@@ -1,0 +1,52 @@
+# INSTALLATION
+.Prerequisties;
+ 1.Node.js
+ 2.Playwright installed
+
+1.Open the command prompt
+ 1.1 Check the node version using command :-  node-v
+ 1.2 Create a new folder :- mkdir bpbNewPlaywright
+ 1.3 Come inside the folder :- cd bpbNewPlaywright
+ 1.4 Install playwright in the directory :- npm init playwright@latest
+ 1.5 Press down the array to select JavaScript or you can choose typeScript
+ 1.6 Press Enter to select tests folder to put your end-to-end tests.
+ 1.7 Press y for github setup
+ 1.8 Press Enter to start downloading browsers binaries to your system
+ 1.9 After installation finishes it will genertae a few files on your system
+
+# WAITS
+1.What is waits
+2.Types of waits :-
+ .. Auto-waiting (Built-in by Playwright)
+     Playwright automatically waits for:
+
+     Elements to be visible before clicking or typing.
+     Navigation to complete after clicks that trigger page changes.
+     Network requests to settle.
+.. Explicit waits :-
+      page.waitForSelector()
+          Wait for a specific element to appear in the DOM.
+      page.waitForTimeout()
+          Pause for a fixed time (not recommended often, but sometimes needed)
+      page.waitForLoadState()
+           Wait for the page to fully load (default is load, but you can also use domcontentloaded, networkidle).
+.. Assertion based waits (with expect)
+      When using Playwright Test, it waits for the condition to pass within a timeout.
+
+
+# POM STRUCTURE
+1. What is POM STRUCTURE?
+  Page Object Model (POM) is a design pattern in test automation that helps you:
+  Organize your code better.
+      Keep your locators and logic separate from your test cases.
+      Make scripts cleaner, reusable, and easy to maintain.
+
+2. Why use POM 
+  2.1  Reusability	Methods like login()  ---> can be reused across tests
+       Clean Code --->	Tests contain only test logic, not locators
+       Easy Maintenance	 ---> If locators change, update only in the page file.
+        Scalability	 ---> Works well for large projects with many pages.
+
+3. More about POM Structure will be seen in Week 7 assignment.
+
+
