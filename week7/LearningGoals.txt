@@ -9,3 +9,22 @@
   (This command will run the test using your playwright.config1.js configuration file and if you have more than one project under the congig file it will run all the projects one by one)
 5. npx playwright test tests/your filename.spec.js --config playwright.config1.js --project=chrome
   (This will run your test according to the playwright.config1.js configuration file and only uses project names chrome under that configuration file.)
+6. npx playwright test --grep @Web
+   ( This command will run only the test that are tagged with @Web
+
+
+
+# Parallel Testing
+  By default in playwright test files will trigger parallel but individual tests present in same test file will run in serial mode.
+  We can change this behaviour 
+   1. To make the test files run in serial we can use worker property in playwright.config.js by giving 
+      workers : 1 or
+      npx playwright test --workers=1
+       (this will run test file using only one worker)
+   2. To make the test present in the same test file run in parallel we can also do that bywriting this one code above the test
+       test.describe.configure({mode:'parallel'});
+        (this will run all the test present in the same test file in parallel mode.
+      There is also one option present which is
+         test.describe.configure({mode:'serial'});
+       ( you may be wondering why to use this because by default it runs this serial but if we pass this code this will run test in serial and if the first test fails it will fail the 
+         later test and will not run the later test. And if we do not pass this command then also test will run in serial but if the first test fails it will run the next test )
