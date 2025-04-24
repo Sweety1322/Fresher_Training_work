@@ -28,3 +28,46 @@
          test.describe.configure({mode:'serial'});
        ( you may be wondering why to use this because by default it runs this serial but if we pass this code this will run test in serial and if the first test fails it will fail the 
          later test and will not run the later test. And if we do not pass this command then also test will run in serial but if the first test fails it will run the next test )
+
+
+# Annotation
+  test.skip() marks the test as irrelevant. Playwright does not run such a test. Use this annotation when the test is not applicable in some configuration.
+  test.fail() marks the test as failing. Playwright will run this test and ensure it does indeed fail. If the test does not fail, Playwright will complain.
+  test.fixme() marks the test as failing.  Use fixme when running the test is slow or crashes.
+  test.slow() marks the test as slow and triples the test timeout.
+  test.only() it will run only this test.
+
+
+# Debugging
+  1. Run in Debug Mode 
+     npx playwright test --debug
+      (This launches the Playwright Inspector, pauses at breakpoints, and lets you step through tests.)
+ 2. Use --slow-mo
+    npx playwright test --headed --slow-mo=100
+     (--headed: opens the browser (not headless)
+       --slow-mo=100: waits 100ms between actions)
+3. Use page.pause() in your test
+   test('my test', async ({ page }) => {
+   await page.goto('https://example.com');
+   await page.pause(); // ← opens inspector here
+   await page.click('text=Some Button');
+   });
+4. Watch and Replay with Tracing
+   npx playwright test --trace=on
+
+
+
+
+# Hooks
+1.  test.afterAl
+     Declares an afterAll hook that is executed once per worker after all tests.
+2.  test.afterEach
+     Declares an afterEach hook that is executed after each test
+3.  test.beforeAll
+     Declares a beforeAll hook that is executed once per worker process before all tests
+4.  test.beforeEach
+      Declares a beforeEach hook that is executed before each test.
+5   test.describe
+     Declares a group of tests
+
+
