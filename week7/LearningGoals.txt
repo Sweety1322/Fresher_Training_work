@@ -1,0 +1,11 @@
+# Different Commands
+ 1. npx playwright test tests/your filename.spec.js --debug
+  (It opens playwright inspector and shows the test indetail. We can also use playwright inspector for generating css which is interesting.)
+2.  npx playwright codegen website you want to go
+  (It will open the website you have given and you can perform any actions you want and playwright will generate the code.)
+3. npx playwright test tests/your filename.spec.js
+  (It will run your test according to the original configuration file)
+4. npx playwright test tests/your filename.spec.js --config playwright.config1.js
+  (This command will run the test using your playwright.config1.js configuration file and if you have more than one project under the congig file it will run all the projects one by one)
+5. npx playwright test tests/your filename.spec.js --config playwright.config1.js --project=chrome
+  (This will run your test according to the playwright.config1.js configuration file and only uses project names chrome under that configuration file.)
