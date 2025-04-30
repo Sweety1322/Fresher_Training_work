@@ -12,7 +12,7 @@ const config = {
   },
 
   reporter: //[['list'],
-  ['html'],
+  'html',
   //['allure-playwright',{outputFolder: 'allure-results'}]],
 
   use: {
