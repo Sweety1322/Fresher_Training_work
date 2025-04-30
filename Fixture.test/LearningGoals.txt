@@ -1,0 +1,24 @@
+#CUCUMBER
+--completed understanding hooks and tags
+--understaning terms like scenario and BDD 
+--created feature files and steps.js as well
+--running in parallel done.
+--retry and html report completed
+
+
+
+#Basic framework completed
+--WINSTON logger studied and implemented
+--completed extending test propertry as fixture and also implemented
+-- wrote 3 test cases
+--you can use html report by following steps
+   1.npx playwright test
+   2.inside playwright-report folder there is a file named index.html copy its path
+   3. paste the path in the browser from there you can see the html report with trace.zip file also present
+   4. or you can write in the terminal 
+        npx playwright test --reporter=html
+          (this will also generate html report)
+--you can also seeallure report by following steps
+  1. npx playwright test
+  2. allure generate allure-result -o allure-playwright
+  3. allure open allure-report
