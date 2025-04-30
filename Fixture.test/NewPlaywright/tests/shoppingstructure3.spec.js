@@ -4,32 +4,32 @@ const {POOManager} = require('../pageobjects/POOManager')
 
 test('rahul shetty', async ({ page }) => {
     const poomanager = new POOManager(page)
-    const { loginpage, dashboardpage, cartpage, orderreviewpage, orderhistorypage} =  poomanager
+    //const { loginpage, dashboardpage, cartpage, orderreviewpage, orderhistorypage} =  poomanager
     await page.goto('https://rahulshettyacademy.com/client')
     const email= "gsweety665@gmail.com"
     const password = "Chandan@123"
     const productName = 'ADIDAS ORIGINAL'
     const countryName= " India"
 
-    //const loginpage = poomanager.getLoginpage()
+    const loginpage = poomanager.getLoginpage()
     await loginpage.goTo()
     await loginpage.validlogin(email,password)
 
-    //const dashboardpage = poomanager.getDashboardpage()
+    const dashboardpage = poomanager.getDashboardpage()
     await dashboardpage.searchproduct(productName)
     await dashboardpage.navigatetocart()
 
-    //const cartpage= poomanager.getCartpage()
+    const cartpage= poomanager.getCartpage()
     await cartpage.Verifyproduct(productName)
     await cartpage.Checkout()
 
-    //const orderreviewpage = poomanager.getOrderreviewpage()
+    const orderreviewpage = poomanager.getOrderreviewpage()
     await orderreviewpage.searchcountryAndselect(countryName)
     const orderId = await orderreviewpage.submitandgetId()
     console.log(orderId)
     await orderreviewpage.navigatetomyorders()
 
-    //const orderhistorypage = poomanager.getOrderhistorypage()
+    const orderhistorypage = poomanager.getOrderhistorypage()
     await orderhistorypage.searchorder(orderId)
 
     expect(orderId.includes(await orderhistorypage.getorderId())).toBeTruthy();
