@@ -4,6 +4,9 @@
 --created feature files and steps.js as well
 --running in parallel done.
 --retry and html report completed
+--By the following command we can run the particular feature file with tags and hooks
+   npx cucumber-js --tags "@Regression" --retry 1 --exit --format html:cucumber-report.html
+    npx cucumber-js --exit
 
 
 
