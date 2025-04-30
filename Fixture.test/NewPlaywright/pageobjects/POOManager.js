@@ -16,7 +16,7 @@ class POOManager {
         this.orderhistorypage = new OrderhistoryPage(this.page) 
 
     }
-    /*getLoginpage()
+    getLoginpage()
     {
         return this.loginpage
     }
@@ -35,6 +35,6 @@ class POOManager {
     getOrderhistorypage()
     {
         return this.orderhistorypage
-    }*/
+    }
 }
 module.exports={POOManager}
