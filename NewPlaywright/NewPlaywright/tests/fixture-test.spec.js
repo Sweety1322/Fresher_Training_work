@@ -32,3 +32,5 @@ test('Add item to cart', async ({ page, cartPage, loginPage }) => {
     logger.info('Item successfully added to cart');
   });
   
+
+  //Trigger
