@@ -30,7 +30,7 @@ jobs:
     - name: Run Playwright tests
       run: |
        cd NewPlaywright/NewPlaywright
-       npx playwright test
+       npx playwright test --config=playwright.config.js
 
     - name: Upload Playwright Report
       if: ${{ !cancelled() }}
